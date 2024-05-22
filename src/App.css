@@ -1,0 +1,13 @@
+.Chat {
+  height: 70vh;
+  width: 19.5vw;
+  overflow: hidden;
+  border: solid white 5px;
+  border-radius: 5%;
+}
+
+.message {
+  margin: 5px;
+  color: white;
+  word-break: break-word;
+}

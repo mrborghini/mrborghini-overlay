@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+      VITE_CHANNEL_NAME: ${VITE_CHANNEL_NAME}
+      VITE_OAUTH_TOKEN: ${VITE_OAUTH_TOKEN}
+    ports:
+      - ${PORT}:${PORT}
