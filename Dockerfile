@@ -14,6 +14,8 @@ FROM nginx:bookworm
 
 COPY --from=build /app/dist /usr/share/nginx/html
 
+ENV NGINX_PORT=${PORT}
+
 EXPOSE ${PORT}
 
 CMD ["nginx", "-g", "daemon off;"]
