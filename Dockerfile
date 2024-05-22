@@ -18,4 +18,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE ${PORT}
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["sh", "-c", "envsubst < /etc/nginx/nginx.conf > /etc/nginx/nginx.conf && nginx -g 'daemon off;'"]
