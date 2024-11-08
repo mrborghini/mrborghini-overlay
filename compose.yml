@@ -1,11 +1,8 @@
 services:
-  frontend:
+  mrborghini-overlay:
     build:
       context: .
     environment:
       NODE_ENV: production
-      VITE_CHANNEL_NAME: ${VITE_CHANNEL_NAME}
-      VITE_OAUTH_TOKEN: ${VITE_OAUTH_TOKEN}
-      NGINX_PORT: ${PORT}
     ports:
-      - ${PORT}:${PORT}
+      - 8080:8080
